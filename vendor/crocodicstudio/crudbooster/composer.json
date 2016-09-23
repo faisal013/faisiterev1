@@ -1,0 +1,25 @@
+{
+    "name": "crocodicstudio/crudbooster",
+    "description": "CRUDBooster is Integrated Laravel Backend Generator",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ferry",
+            "email": "ferry@crocodic.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "barryvdh/laravel-dompdf": "0.6.*",
+        "doctrine/dbal": "~2.3",
+        "laravelcollective/bus": "^5.2",
+        "maatwebsite/excel": "~2.1.0",                
+        "unisharp/laravel-filemanager": "^1.6"
+    },
+    "autoload": {
+        "psr-4": {
+          "crocodicstudio\\crudbooster\\": "src/"
+        }
+      }
+}
