@@ -31,7 +31,9 @@ class AdminBangunanController extends \crocodicstudio\crudbooster\controllers\CB
 		$this->col[] = array("label"=>"Kepemilikan","name"=>"bangunan_milik" );
 		$this->col[] = array("label"=>"Kondisi Bangunan","name"=>"bangunan_kondisi" );
 		$this->col[] = array("label"=>"Jumlah","name"=>"bangunan_jml_m" );
-		/*$this->col[] = array("label"=>"Bangunan Jml Bm","name"=>"bangunan_jml_bm" );*/
+
+		$this->col[] = array("label"=>"Tahun Pembangunan","name"=>"bangunan_tahun" );
+
 		$this->col[] = array("label"=>"Foto Bangunan","name"=>"photo_bangunan","image"=>1 );
 		/*$this->col[] = array("label"=>"Create At","name"=>"create_at" );
 		$this->col[] = array("label"=>"Update At","name"=>"update_at" );
@@ -44,7 +46,8 @@ class AdminBangunanController extends \crocodicstudio\crudbooster\controllers\CB
 		$this->form[] = array("label"=>"Kepemilikan","name"=>"bangunan_milik","type"=>"select","required"=>TRUE,"dataenum"=>['Milik|Milik','Sewa|Sewa','Pinjam|Pinjam']);
 		$this->form[] = array("label"=>"Kondisi Bangunan","name"=>"bangunan_kondisi","type"=>"select","required"=>TRUE,"dataenum"=>['Baik|Baik','Rusak Ringan|Rusak Ringan','Rusak Berat|Rusak Berat']);
 		$this->form[] = array("label"=>"Jumlah","name"=>"bangunan_jml_m","type"=>"number","required"=>TRUE,"validation"=>"required|integer|min:0");
-	/*	$this->form[] = array("label"=>"Bangunan Jml Bm","name"=>"bangunan_jml_bm","type"=>"number","required"=>TRUE,"validation"=>"required|integer|min:0");*/
+
+	    $this->form[] = array("label"=>"Tahun Pembangunan","name"=>"bangunan_tahun","type"=>"text","required"=>TRUE,"validation"=>"required|required|min:0|max:4");
 
 		$this->form[] = array("label"=>"Foto Bangunan","name"=>"photo_bangunan","type"=>"upload_standard",'upload_file'=>false,"help"=>"Resolution recomended is 2500x4300px",'required'=>true,'validation'=>'required|image|max:10000');
 

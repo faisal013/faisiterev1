@@ -34,7 +34,7 @@ class AdminTanahController extends \crocodicstudio\crudbooster\controllers\CBCon
 
 		$this->form = array();
 		$this->form[] = array("label"=>"Infrastruktur","name"=>"id_infrastruktur","type"=>"select","required"=>TRUE,"validation"=>"required|integer|min:0","datatable"=>"infrastruktur,infrastruktur_jenis");
-		$this->form[] = array("label"=>"Kepemilikan","name"=>"tanah_milik","type"=>"text","required"=>TRUE,"validation"=>"required|min:3|max:255");
+		$this->form[] = array("label"=>"Kepemilikan","name"=>"tanah_milik","type"=>"select","required"=>TRUE,"dataenum"=>['Milik|Milik','Sewa|Sewa','Pinjam|Pinjam']);
 		$this->form[] = array("label"=>"Luas Tanah","name"=>"tanah_luas","type"=>"number","required"=>TRUE,"validation"=>"required|integer|min:0");
 		/*$this->form[] = array("label"=>"Create At","name"=>"create_at","type"=>"datetime","required"=>TRUE,"validation"=>"required|date_format:Y-m-d H:i:s");
 		$this->form[] = array("label"=>"Update At","name"=>"update_at","type"=>"datetime","required"=>TRUE,"validation"=>"required|date_format:Y-m-d H:i:s");

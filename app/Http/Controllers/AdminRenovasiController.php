@@ -26,16 +26,18 @@ class AdminRenovasiController extends \crocodicstudio\crudbooster\controllers\CB
 
         $this->col = array();
 		$this->col[] = array("label"=>"Bangunan","name"=>"id_bangunan","join"=>"bangunan,id_infrastruktur");
-		$this->col[] = array("label"=>"Waktu Pembangunan","name"=>"renovasi_bangun" );
+
+		$this->col[] = array("label"=>"Keterangan","name"=>"renovasi_ket" );
 		$this->col[] = array("label"=>"Renovasi Terakhir","name"=>"renovasi_renov" );
 		/*$this->col[] = array("label"=>"Create At","name"=>"create_at" );
 		$this->col[] = array("label"=>"Update At","name"=>"update_at" );
 		$this->col[] = array("label"=>"Deleted At","name"=>"deleted_at" );*/
 
 		$this->form = array();
-		$this->form[] = array("label"=>"Bangunan","name"=>"id_bangunan","type"=>"select","required"=>TRUE,"validation"=>"required|integer|min:0","datatable"=>"bangunan,infrastruktur_jenis");
-		$this->form[] = array("label"=>"Waktu Pembangunan","name"=>"renovasi_bangun","type"=>"date","required"=>TRUE,"validation"=>"required|date");
-		$this->form[] = array("label"=>"Renovasi Terakhir","name"=>"renovasi_renov","type"=>"date","required"=>TRUE,"validation"=>"required|date");
+		$this->form[] = array("label"=>"Bangunan","name"=>"id_bangunan","type"=>"select","required"=>TRUE,"validation"=>"required|integer|min:0","datatable"=>"bangunan,id_infrastruktur",);
+
+		$this->form[] = array("label"=>"Keterangan","name"=>"renovasi_ket","type"=>"text","required"=>TRUE,"validation"=>"required|min:3|max:255");
+		$this->form[] = array("label"=>"Renovasi Terakhir","name"=>"renovasi_renov","type"=>"text","required"=>TRUE,"validation"=>"required|min:0|max:4");
 		/*$this->form[] = array("label"=>"Create At","name"=>"create_at","type"=>"datetime","required"=>TRUE,"validation"=>"required|date_format:Y-m-d H:i:s");
 		$this->form[] = array("label"=>"Update At","name"=>"update_at","type"=>"datetime","required"=>TRUE,"validation"=>"required|date_format:Y-m-d H:i:s");
 		$this->form[] = array("label"=>"Deleted At","name"=>"deleted_at","type"=>"datetime","required"=>TRUE,"validation"=>"required|date_format:Y-m-d H:i:s");*/

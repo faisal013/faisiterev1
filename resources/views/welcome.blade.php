@@ -118,7 +118,7 @@ footer.copyright {
 </header>
 <nav class="menus">
     <ul>
-        <li><a href="http://localhost/faisiterev1/public/admin" type="button" class="btn btn-primary">Login Disini</a></li>
+        <li><a href="http://localhost/faisiterev1/public/admin" type="button" class="btn btn-info">Login Disini</a></li>
        
     </ul>
 </nav>

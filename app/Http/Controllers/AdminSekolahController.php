@@ -66,7 +66,9 @@ class AdminSekolahController extends \crocodicstudio\crudbooster\controllers\CBC
     $this->form[] = array("label"=>"Kategori Wilayah","name"=>"sekolah_kat_wil","type"=>"select","required"=>TRUE,"dataenum"=>['Daerah Terpecil|Daerah Terpecil','Daerah Perbatasan|Daerah Perbatasan','Daerah Transmigrasi|Daerah Transmigrasi','Tidak Termasuk Kategori 1, 2 dan 3|Tidak Termasuk Kategori 1, 2 dan 3']);
 		$this->form[] = array("label"=>"Kecamatan","name"=>"sekolah_kec","type"=>"text","required"=>TRUE,"validation"=>"required|min:3|max:255");
 		$this->form[] = array("label"=>"Kabupaten/Kota","name"=>"sekolah_kab_kota","type"=>"text","required"=>TRUE,"validation"=>"required|min:3|max:255");
-    $this->form[] = array("label"=>"Kategori Kabupaten/Kota","name"=>"sekolah_kat_kab_kot","type"=>"radio","required"=>TRUE,"dataenum"=>['Kabupaten|Kabupaten','Kota|Kota'],"required"=>TRUE);//9/17/16
+  
+        $this->form[] = array("label"=>"Kategori Kabupaten/Kota","name"=>"sekolah_kat_kab_kot","type"=>"radio","required"=>TRUE,"dataenum"=>['Kabupaten|Kabupaten','Kota|Kota']);
+
 		$this->form[] = array("label"=>"Propinsi","name"=>"sekolah_prop","type"=>"text","required"=>TRUE,"validation"=>"required|min:3|max:255");
 		$this->form[] = array("label"=>"Kode Pos","name"=>"sekolah_pos","type"=>"number","required"=>TRUE,"validation"=>"required|integer|min:0");
 		$this->form[] = array("label"=>"Telp","name"=>"sekolah_telp","type"=>"text","required"=>TRUE,"validation"=>"required|min:3|max:255");
